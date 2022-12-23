@@ -4,7 +4,6 @@ import json
 from dataclasses import dataclass
 # from dotenv import load_dotenv
 # load_dotenv()
-
 # Provide the mongodb localhost url to connect python to mongodb.
 import os
 @dataclass
@@ -15,3 +14,5 @@ class EnvironmentVariable:
 
 env_var = EnvironmentVariable()
 mongo_client = pymongo.MongoClient(env_var.mongo_db_url)
+
+TARGET_COLUMN = "class"

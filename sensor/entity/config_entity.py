@@ -2,12 +2,12 @@ import os,sys
 from sensor.exception import SensorException
 from sensor.logger import logging
 from datetime import datetime
+
 FILE_NAME = "sensor.csv"
 TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 
 class TrainingPipelineConfig:
-
     def __init__(self):
         try:
             self.artifact_dir = os.path.join(os.getcwd(),"artifact",f"{datetime.now().strftime('%m%d%Y__%H%M%S')}")
@@ -16,7 +16,6 @@ class TrainingPipelineConfig:
 
 
 class DataIngestionConfig:
-
     def __init__(self,training_pipeline_config:TrainingPipelineConfig)->None:
         try:
             self.database_name="sensor"
@@ -35,7 +34,14 @@ class DataIngestionConfig:
         except Exception  as e:
             raise SensorException(e,sys)     
 
-class DataValidationConfig:...
+class DataValidationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.data_validation_dir = os.path.join(training_pipeline_config.artifact_dir,"data_validation")
+        self.report_file_path = os.path.join(self.data_validation_dir,"report.yaml")
+        self.missing_percentage_threshold:float = 0.7
+        self.base_file_path=os.path.join("aps_failure_training_set1.csv")
+
+
 class DataTransformationConfig:...
 class ModelTrainerConfig:...
 class ModelEvaluationConfig:...
