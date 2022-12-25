@@ -1,5 +1,5 @@
 data_to_mongo/.env
 artifact
 **__pycache__**
-.env'
+**.env**
 data_to_mongo/.env
