@@ -1,0 +1,2 @@
+[ 2022-12-31 15:09:36,130 ] 21 root - INFO - Exporting collection data as pandas dataframe
+[ 2022-12-31 15:09:36,130 ] 21 root - INFO - Reading data from database: sensor and collection: sensor_data

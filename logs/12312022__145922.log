@@ -365,3 +365,28 @@
 [ 2022-12-31 15:03:37,939 ] 145 root - INFO - Data validation artifact: DataValidationArtifact(report_file_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/data_validation/report.yaml')
 [ 2022-12-31 15:03:37,941 ] 24 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Data Transformation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 [ 2022-12-31 15:03:39,835 ] 75 root - INFO - Before resampling in training set Input: (81423, 170) Target:(81423,)
+[ 2022-12-31 15:05:51,316 ] 77 root - INFO - After resampling in training set Input: (158368, 170) Target:(158368,)
+[ 2022-12-31 15:05:51,316 ] 79 root - INFO - Before resampling in testing set Input: (27141, 170) Target:(27141,)
+[ 2022-12-31 15:06:04,754 ] 81 root - INFO - After resampling in testing set Input: (52676, 170) Target:(52676,)
+[ 2022-12-31 15:06:04,998 ] 55 root - INFO - Entered the save_object method of utils
+[ 2022-12-31 15:06:04,999 ] 59 root - INFO - Exited the save_object method of utils
+[ 2022-12-31 15:06:05,000 ] 55 root - INFO - Entered the save_object method of utils
+[ 2022-12-31 15:06:05,000 ] 59 root - INFO - Exited the save_object method of utils
+[ 2022-12-31 15:06:05,000 ] 112 root - INFO - Data transformation object DataTransformationArtifact(transform_object_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/data_transformation/transformer/transformer.pkl', transformed_train_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/data_transformation/transformed/train.npz', transformed_test_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/data_transformation/transformed/test.npz', target_encoder_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/data_transformation/target_encoder/target_encoder.pkl')
+[ 2022-12-31 15:06:05,001 ] 16 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Model Trainer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2022-12-31 15:06:05,001 ] 41 root - INFO - Loading train and test array.
+[ 2022-12-31 15:06:05,045 ] 45 root - INFO - Splitting input and target feature from both train and test arr.
+[ 2022-12-31 15:06:05,045 ] 49 root - INFO - Train the model
+[ 2022-12-31 15:07:30,741 ] 52 root - INFO - Calculating f1 train score
+[ 2022-12-31 15:07:31,074 ] 56 root - INFO - Calculating f1 test score
+[ 2022-12-31 15:07:31,171 ] 60 root - INFO - train score:1.0 and tests score 0.996286492353983
+[ 2022-12-31 15:07:31,171 ] 62 root - INFO - Checking if our model is underfitting or not
+[ 2022-12-31 15:07:31,171 ] 67 root - INFO - Checking if our model is overfiiting or not
+[ 2022-12-31 15:07:31,171 ] 74 root - INFO - Saving mode object
+[ 2022-12-31 15:07:31,171 ] 55 root - INFO - Entered the save_object method of utils
+[ 2022-12-31 15:07:31,175 ] 59 root - INFO - Exited the save_object method of utils
+[ 2022-12-31 15:07:31,175 ] 78 root - INFO - Prepare the artifact
+[ 2022-12-31 15:07:31,175 ] 81 root - INFO - Model trainer artifact: ModelTrainerArtifact(model_path='/home/dataguy/sensor_fault_detection/artifact/12312022__145924/model_trainer/model/model.pkl', f1_train_score=1.0, f1_test_score=0.996286492353983)
+[ 2022-12-31 15:07:31,175 ] 19 root - INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Model Evaluation <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[ 2022-12-31 15:07:31,175 ] 35 root - INFO - if saved model folder has model the we will compare which model is best trained or the model from saved model folder
+[ 2022-12-31 15:07:31,176 ] 41 root - INFO - Model evaluation artifact: ModelEvaluationArtifact(is_model_accepted=True, improved_accuracy=None)
