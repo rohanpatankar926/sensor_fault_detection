@@ -9,8 +9,6 @@ from sklearn.metrics import f1_score
 
 
 class ModelTrainer:
-
-
     def __init__(self,model_trainer_config:config_entity.ModelTrainerConfig,
                 data_transformation_artifact:artifacts_entity.DataTransformationArtifact
                 ):
@@ -26,8 +24,6 @@ class ModelTrainer:
         try:
             #Wite code for Grid Search CV
             pass
-            
-
         except Exception as e:
             raise SensorException(e, sys)
 
